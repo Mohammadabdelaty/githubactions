@@ -13,3 +13,6 @@ jobs:
       - name: Hello DevOps world
         run: echo "Hello DevOps World, it's me Mohammad Abdelaty!"
 
+      - name: List dirs
+        run: ls -Fal
+
