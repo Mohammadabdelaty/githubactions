@@ -1,0 +1,15 @@
+name: Github actions
+
+on:
+  push:
+    branches:
+      - main # Any branche
+
+jobs:
+  Frist:
+    runs-on: ubuntu-latest
+
+    steps:
+      -name: Hello DevOps world
+       run: echo "Hello DevOps World, it's me Mohammad Abdelaty!"
+
