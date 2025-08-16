@@ -13,6 +13,9 @@ jobs:
       - name: Hello DevOps world
         run: echo "Hello DevOps World, it's me Mohammad Abdelaty!"
 
+      - name: chekcout current repo
+        uses: actions/checkout@v5.0.0
+
       - name: List dirs
         run: ls -Fal
 
