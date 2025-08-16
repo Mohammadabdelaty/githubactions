@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -name: Hello DevOps world
-       run: echo "Hello DevOps World, it's me Mohammad Abdelaty!"
+      - name: Hello DevOps world
+        run: echo "Hello DevOps World, it's me Mohammad Abdelaty!"
 
