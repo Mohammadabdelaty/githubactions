@@ -1,0 +1,8 @@
+{
+    "name": "githubactions",
+    "version": "1.0.0",
+    "main": "src/app.js",
+    "scripts": {
+        "debug": "bash src/test.sh"
+    }
+}
