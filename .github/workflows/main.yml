@@ -1,21 +1,20 @@
-# name: Github actions
+name: Github actions
+on:
+  push:
+    branches:
+      - mody # Any branche
 
-# on:
-#   push:
-#     branches:
-#       - main # Any branche
+jobs:
+  Frist:
+    runs-on: ubuntu-latest
 
-# jobs:
-#   Frist:
-#     runs-on: ubuntu-latest
+    steps:
+      - name: Hello DevOps world
+        run: echo "Hello DevOps World, it's me Mohammad Abdelaty!"
 
-#     steps:
-#       - name: Hello DevOps world
-#         run: echo "Hello DevOps World, it's me Mohammad Abdelaty!"
+      - name: chekcout current repo
+        uses: actions/checkout@v5.0.0
 
-#       - name: chekcout current repo
-#         uses: actions/checkout@v5.0.0
-
-#       - name: List dirs
-#         run: ls -Fal
+      - name: List dirs
+        run: ls -Fal
 
