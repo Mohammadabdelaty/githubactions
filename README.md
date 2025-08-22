@@ -51,6 +51,8 @@ jobs:
     job_2:
       needs: job_1
 ```
+![alt text](image-3.png)
+![alt text](image-4.png)
 
 
 `on.repository_dispatch:`
