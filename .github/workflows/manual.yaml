@@ -6,11 +6,8 @@ on:
 jobs:
   deploy:
     runs-on: ubunut-latest
-  
-    steps:
-      - name: Checkout-repositor
-        uses: actions/checkout@v5.0.0
 
+    steps:
       - name: Run a script
         run: |
           echo "This is a manually triggered workflow."
