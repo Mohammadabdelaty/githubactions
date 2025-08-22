@@ -44,3 +44,28 @@ To see runs for this workflow, try: gh run list --workflow=manual.yml
 gh run list --workflow=manual.yml
 ```
 ![alt text](image-1.png)
+
+`on.repository_dispatch:`
+Purpose is to trigger the workflow manually responding to api specific call.
+You need to focus on type of event you put in the workflow in my case it's `deploy`:
+```yaml
+on:
+  repository_dispatch:
+    types: [deploy]
+```
+
+Now you need to generate an api token. Go to up right > Settings > developper setteings > PAT
+Add a permission checkbox "workflow"
+
+then for security export it in a variable in your terminal:
+
+```bash
+export GITHUB_PAT=<PAT>
+ curl -X POST \
+-H "Authorization: token $GITHUB_PAT" \
+-H "Accept: application/vnd.github.v3+json" \
+https://api.github.com/Mohammadabdelaty/githubactions/dispatches \
+-d '{"event_type": "deploy"}'
+```
+Then check your workflow:
+![alt text](image-2.png)
