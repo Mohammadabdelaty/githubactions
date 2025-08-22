@@ -1,6 +1,6 @@
 name: Scheduled Workflow
 on:
-  schedule:
+ schedule:
     - cron: '*/1 * * * *' # Runs every Sunday at midnight
 
 jobs:
