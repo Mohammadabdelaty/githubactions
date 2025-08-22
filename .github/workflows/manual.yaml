@@ -9,5 +9,4 @@ jobs:
 
     steps:
       - name: Run a script
-        run: |
-          echo "This is a manually triggered workflow."
+        run: echo "This is a manually triggered workflow."
