@@ -1,0 +1,11 @@
+name: Manual workflow with api
+
+on:
+  repository_dispatch:
+    types: [deploy]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: echo "Hi I'm triggered manually using api"
