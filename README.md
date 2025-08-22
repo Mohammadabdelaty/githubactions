@@ -45,6 +45,14 @@ gh run list --workflow=manual.yml
 ```
 ![alt text](image-1.png)
 
+We can apply step dependancy by adding `needs` 
+```yaml
+jobs:
+    job_2:
+      needs: job_1
+```
+
+
 `on.repository_dispatch:`
 Purpose is to trigger the workflow manually responding to api specific call.
 You need to focus on type of event you put in the workflow in my case it's `deploy`:
@@ -69,3 +77,4 @@ https://api.github.com/Mohammadabdelaty/githubactions/dispatches \
 ```
 Then check your workflow:
 ![alt text](image-2.png)
+
