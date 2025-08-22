@@ -6,6 +6,7 @@ on:
 jobs:
   deploy:
     runs-on: ubunut-latest
+  
     steps:
       - name: Checkout-repositor
         uses: actions/checkout@v5.0.0
