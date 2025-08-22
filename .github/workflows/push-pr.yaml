@@ -1,3 +1,5 @@
+name: Webhook based triggering
+
 on:
   push:
     branches:
