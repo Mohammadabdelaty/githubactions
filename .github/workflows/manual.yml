@@ -1,0 +1,11 @@
+name: Manual workflo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: echo "Hi I'm triggered manually"
