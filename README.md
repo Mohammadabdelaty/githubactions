@@ -7,3 +7,5 @@ This readme is a study note and it is going to be inhanced and updated periodeca
 * Some commits were due accessing git from wsl and vscode:
     you need to add your git path `/usr/bin/git` into `git.path` -search for it in vscode settings-
 
+## Scheduled workflow
+It's used to scheduel a specific workflow not related to any action: soething like checking the code or generating a report periodecally.
