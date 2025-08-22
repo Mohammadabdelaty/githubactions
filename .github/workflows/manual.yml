@@ -2,7 +2,15 @@ name: Manual workflo
 
 on:
   workflow_dispatch:
-
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - staging
 jobs:
   deploy:
     runs-on: ubuntu-latest
