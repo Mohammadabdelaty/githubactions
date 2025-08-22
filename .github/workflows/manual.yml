@@ -16,4 +16,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo
-        run: echo "Hi I'm triggered manually"
+        run: echo "Hi I'm triggered manually to deploy to ${{ github.event.inputs.environment }} environment!"
