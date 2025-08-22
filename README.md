@@ -78,5 +78,6 @@ https://api.github.com/Mohammadabdelaty/githubactions/dispatches \
 -d '{"event_type": "deploy"}'
 ```
 Then check your workflow:
+
 ![alt text](image-2.png)
 
