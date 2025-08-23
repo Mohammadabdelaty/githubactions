@@ -17,4 +17,4 @@ jobs:
         with:
           entrypoint: /bin/sh
           args: |
-            -c "echo 'Hi I'm Docker step'"
+            -c "echo 'Hi I am Docker step'"
