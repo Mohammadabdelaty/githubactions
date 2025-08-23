@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: if-message
         run: echo "This is a IF conditional workflow."
-        if: ${{ github.ref == 'ref/head/main' }}
+        if: github.ref == 'refs/heads/main'
       
