@@ -18,7 +18,7 @@ Only after pushing the changes
 It's used to scheduel a specific workflow not related to any action: soething like checking the code or generating a report periodecally.
 
 But, from the next screenshot it seems it is not repeat the scheduled job befor less than 10 minutes.
-![alt text](image.png)
+![alt text](screens/image.png)
 
 I'm truning it to run once a year.
 "0 0 1 1 *"
