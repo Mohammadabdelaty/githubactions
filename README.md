@@ -135,4 +135,11 @@ run: echo "The token is $TOKEN"
 ```
 ![alt text](screens/image-9.png)
 
-It's much better to keep this senistive data hidden so we will mash the api_key
+It's much better to keep this senistive data hidden so we will mass the api_key
+```yaml
+        run: |
+            echo "::add-mask:: $TOKEN"
+            echo "The token is $TOKEN"        
+```
+
+![alt text](screens/image-10.png)
