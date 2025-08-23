@@ -106,3 +106,9 @@ In this case instaead of direct run we add `uses:`
 ```
 ![alt text](screens/image-6.png)
 
+# Conditional workflow
+Could be a condition to run the whole workflow, or a condition to run a step that depends on another step like if the above is successful i'll run
+```yaml
+if: ${{ failure () }}
+```
+![alt text](screens/image-7.png)
