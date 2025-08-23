@@ -1,0 +1,22 @@
+name: if_conditonal
+
+on: 
+    workflow_dispatch:
+
+jobs:
+  if_conditional_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5.0.0
+
+      - name: Run a script
+        run: |
+          echo "This is a if conditional workflow."
+          # Add your scheduled tasks here
+          ls -Fal
+
+      - name: Conditional Step
+        if: ${{ failure () }}
+        run: echo "This step runs only on workflow_dispatch event."
