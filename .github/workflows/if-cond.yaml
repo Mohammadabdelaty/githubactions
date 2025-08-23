@@ -22,4 +22,5 @@ jobs:
         run: echo "This step runs only on workflow_dispatch event."
 
       - name: 3rd step
-        run: echo "::warninig:: This step  will runs always."
+        run: |
+            echo "::warninig:: This step  will runs always."
