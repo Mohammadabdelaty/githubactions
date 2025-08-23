@@ -1,0 +1,18 @@
+name: Scheduled Workflow
+on:
+  schedule:
+    - cron: '0 0 1 1 *' # Runs every Sunday at midnight
+
+jobs:
+  scheduled-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5.0.0
+
+      - name: Run a script
+        run: |
+          echo "This is a scheduled workflow running every minute."
+          # Add your scheduled tasks here
+          ls -Fal

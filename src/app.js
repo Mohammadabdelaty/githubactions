@@ -9,4 +9,4 @@ if (require.main === module) {
 	console.log(greet(name));
 }
 
-// This comment is for testing purposes
+// This comment is for testing purposes - again -

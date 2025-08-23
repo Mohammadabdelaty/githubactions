@@ -3,8 +3,7 @@
 OUTPUT=$(node -e "console.log(require('./src/app')('World'))")
 
 if [ "$OUTPUT" == "Hello, World!" ]; then
-  echo "Test passed"
+  echo "✅ Test passed"
 else
-  echo "Test failed"
+  echo "❌ Test failed"
 fi
-# fefwer
