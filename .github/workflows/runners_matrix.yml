@@ -1,0 +1,19 @@
+name: Test runners as matirx
+
+on:
+  repository_dispatch:
+    types: [nodejs-matrix]
+
+jobs:
+  matrix_job:
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-latest, windows-latest, macos-latest]
+        nodes-version: [18.x, 20.x]
+    runs-on: ${{ matrix.runner}}
+    steps:
+      - name: install nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix['nodes-version'] }}
