@@ -13,6 +13,6 @@ jobs:
         run: echo "This is a IF conditional workflow."
         if: ${{ github.ref == 'ref/head/main' }}
       
-      - name: not-message
-        run: echo "This is a NOT conditional workflow."
-        if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
+      # - name: not-message
+      #   run: echo "This is a NOT conditional workflow."
+      #   if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
