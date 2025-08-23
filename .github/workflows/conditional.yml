@@ -1,15 +1,15 @@
 name: Conditional workflow
 
 on:
-  workflow_dispatch:
-  # repository_dispatch:
-    # types: [IF-conditions, tag, OR-conditions]
+  # workflow_dispatch:
+  repository_dispatch:
+    types: [main, tag]
 
 jobs:
   condition_job:
     runs-on: ubunut-latest
     steps:
       - name: if-message
+        if: github.event.action == 'main'
         run: echo "This is a IF conditional workflow."
-        if: github.ref == 'refs/heads/main'
       
