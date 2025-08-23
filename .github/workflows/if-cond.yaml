@@ -16,6 +16,7 @@ jobs:
           echo "This is a if conditional workflow."
           # Add your scheduled tasks here
           ls -Fal
+          echo "TOKEN=ABCD" >> $GITHUB_ENV
 
       - name: Conditional Step
         if: ${{ failure () }}
@@ -29,3 +30,5 @@ jobs:
             else
               echo "This step is not deprecated."
             fi
+      - name: echo env
+        run: echo "The token is $TOKEN"

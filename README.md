@@ -112,3 +112,17 @@ Could be a condition to run the whole workflow, or a condition to run a step tha
 if: ${{ failure () }}
 ```
 ![alt text](screens/image-7.png)
+
+Also in case you need to add some warining if some sw version is deprecated
+```yaml
+        run: |
+            deprecated=true
+            if [ "$deprecated" = true ]; then
+              echo "::warning:: This step is deprecated."
+            else
+              echo "This step is not deprecated."
+            fi
+```
+![alt text](screens/image-8.png)
+
+# Variables
