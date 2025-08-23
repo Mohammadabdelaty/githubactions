@@ -31,4 +31,6 @@ jobs:
               echo "This step is not deprecated."
             fi
       - name: echo env
-        run: echo "The token is $TOKEN"
+        run: |
+            echo "::mask:: $TOKEN"
+            echo "The token is $TOKEN"

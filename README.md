@@ -126,3 +126,13 @@ Also in case you need to add some warining if some sw version is deprecated
 ![alt text](screens/image-8.png)
 
 # Variables
+Github allow to somehow exporting a vairable to another step by 'appending' it to $GITHUB_ENV variable like the following
+```yaml
+run: |
+  echo "TOKEN=ABCD" >> $GITHUB_ENV
+# In another step
+run: echo "The token is $TOKEN"
+```
+![alt text](screens/image-9.png)
+
+It's much better to keep this senistive data hidden so we will mash the api_key
