@@ -23,4 +23,9 @@ jobs:
 
       - name: 3rd step
         run: |
-            echo "::warninig:: This step  will runs always."
+            deprecated=true
+            if [ "$deprecated" = true ]; then
+              echo "::warning:: This step is deprecated."
+            else
+              echo "This step is not deprecated."
+            fi
