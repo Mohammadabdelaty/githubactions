@@ -2,7 +2,7 @@ name: Docker and VM
 
 on:
   repository_dispatch:
-    types: [dokcer]
+    types: [docker]
 
 jobs:
 
@@ -17,4 +17,4 @@ jobs:
         with:
           entrypoint: /bin/sh
           args: |
-            echo "Hi I'm Docker step"
+            -c 'echo "Hi I'm Docker step"'
