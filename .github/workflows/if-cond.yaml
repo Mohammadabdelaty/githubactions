@@ -36,7 +36,7 @@ jobs:
             echo "The token is $TOKEN"
       - name: check config file
         run: |
-            if [ -f "config.yml" ]; then
+            if [ -f "./config.yml" ]; then
                 echo "::debug::Config file exists."
             elas:
                 echo "::error::Config file is missing!"
