@@ -32,5 +32,11 @@ jobs:
             fi
       - name: echo env
         run: |
-            echo "::mask:: $TOKEN"
+            echo "::add-mask:: $TOKEN"
             echo "The token is $TOKEN"
+      - name: check config file
+        run: |
+            if [ -f config.yml ]; then
+                echo "::debug::Config file exists."
+            elas:
+                echo "::error::Config file is missing!"
