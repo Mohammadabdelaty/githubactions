@@ -3,13 +3,14 @@ name: Conditional workflow
 on:
   # workflow_dispatch:
   repository_dispatch:
-    types: [main, tag]
+    types: [main]
 
 jobs:
   condition_job:
     runs-on: ubunut-latest
     steps:
       - name: if-message
-        if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
-        run: echo "This is a IF conditional workflow."
-      
+        run: echo "This is a 1st step."
+      - name: if-above-works
+        run: echo "This is a 2nd step."
+        if: ${{ success() }}
