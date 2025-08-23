@@ -1,0 +1,17 @@
+name: Conditional workflow
+
+on:
+  repository_dispatch:
+    types: [IF-conditions, tag, OR-conditions]
+
+jobs:
+  condition_job:
+    runs-on: ubunut-latest
+    steps:
+      - name: if-message
+        run: echo "This is a IF conditional workflow."
+        if: ${{ github.event.action == 'IF-conditions' }}
+      
+      - name: not-message
+        run: echo "This is a NOT conditional workflow."
+        if: ${{ startsWith(github.ref, 'ref/tags/v') }}
