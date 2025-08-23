@@ -2,7 +2,7 @@ name: Docker and VM
 
 on:
   repository_dispatch:
-    types: [deploy]
+    types: [dokcer_and_vm]
 
 jobs:
 
