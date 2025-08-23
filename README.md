@@ -93,3 +93,16 @@ In this case instaead of direct run we add `uses:`
             -c "echo 'Hi I am Docker step'"
 ```
 ![alt text](screens/image-5.png)
+
+# Adding strategy not to fail for various runners
+```yaml
+  matrix_job:
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-latest, windows-latest, macos-latest]
+        nodes-version: [18.x, 20.x]
+    runs-on: ${{ matrix.runner}}
+```
+![alt text](screens/image-6.png)
+
