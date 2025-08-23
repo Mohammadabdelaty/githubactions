@@ -1,9 +1,9 @@
 name: Conditional workflow
 
 on:
-  # workflow_dispatch:
-  repository_dispatch:
-    types: [main]
+  workflow_dispatch:
+  # repository_dispatch:
+    # types: [main]
 
 jobs:
   condition_job:
