@@ -11,6 +11,6 @@ jobs:
     steps:
       - name: if-message
         run: echo "This is a 1st step."
-      - name: if-above-works
-        run: echo "This is a 2nd step."
+      # - name: if-above-works
+      #   run: echo "This is a 2nd step."
       
