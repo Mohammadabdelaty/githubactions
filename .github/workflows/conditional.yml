@@ -1,8 +1,9 @@
 name: Conditional workflow
 
 on:
-  repository_dispatch:
-    types: [IF-conditions, tag, OR-conditions]
+  workflow_dispatch:
+  # repository_dispatch:
+    # types: [IF-conditions, tag, OR-conditions]
 
 jobs:
   condition_job:
@@ -10,8 +11,8 @@ jobs:
     steps:
       - name: if-message
         run: echo "This is a IF conditional workflow."
-        if: ${{ github.event.action == 'IF-conditions' }}
+        if: ${{ github.ref == 'ref/head/main' }}
       
       - name: not-message
         run: echo "This is a NOT conditional workflow."
-        if: ${{ startsWith(github.ref, 'ref/tags/v') }}
+        if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
