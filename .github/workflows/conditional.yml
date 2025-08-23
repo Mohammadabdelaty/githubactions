@@ -10,6 +10,6 @@ jobs:
     runs-on: ubunut-latest
     steps:
       - name: if-message
-        if: github.event.action == 'main'
+        if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
         run: echo "This is a IF conditional workflow."
       
