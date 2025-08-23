@@ -1,0 +1,17 @@
+name: Sensitive token
+
+on: 
+    workflow_dispatch:
+
+jobs:
+  mask_token_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run a script
+        run: |
+          echo "TOKEN=ABCD" >> $GITHUB_ENV
+      - name: echo env
+        run: |
+            echo "::add-mask:: $TOKEN"
+            echo "The token is $TOKEN"        

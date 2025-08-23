@@ -21,23 +21,3 @@ jobs:
       - name: Conditional Step
         if: ${{ failure () }}
         run: echo "This step runs only on workflow_dispatch event."
-
-      - name: 3rd step
-        run: |
-            deprecated=true
-            if [ "$deprecated" = true ]; then
-              echo "::warning:: This step is deprecated."
-            else
-              echo "This step is not deprecated."
-            fi
-      - name: echo env
-        run: |
-            echo "::add-mask:: $TOKEN"
-            echo "The token is $TOKEN"
-      - name: check config file
-        run: |
-            if [ -f "./config.yml" ]; then
-                echo "::debug::Config file exists."
-            elas:
-                echo "::error::Config file is missing!"
-            fi

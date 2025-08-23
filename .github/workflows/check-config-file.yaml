@@ -1,0 +1,19 @@
+name: Check config file
+
+on: 
+    workflow_dispatch:
+
+jobs:
+  check_config_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5.0.0
+      - name: check config file
+        run: |
+            if [ -f "./config.yml" ]; then
+                echo "::debug::Config file exists."
+            elas:
+                echo "::error::Config file is missing!"
+            fi
