@@ -81,3 +81,14 @@ Then check your workflow:
 
 ![alt text](image-2.png)
 
+
+# Step in container
+In this case instaead of direct run we add `uses:`
+```yaml
+      - name: Docker step
+        uses: docker://alpine:3.12
+        with:
+          entrypoint: /bin/sh
+          args: |
+            echo "Hi I'm Docker step"
+```

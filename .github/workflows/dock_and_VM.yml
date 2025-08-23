@@ -1,0 +1,20 @@
+name: Docker and VM
+
+on:
+  repository_dispatch:
+    types: [deploy]
+
+jobs:
+
+  hyprid_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: VM step
+        run: echo "Hi I'm VM step"
+      - name: Docker step
+        uses: docker://alpine:3.12
+        with:
+          entrypoint: /bin/sh
+          args: |
+            echo "Hi I'm Docker step"
