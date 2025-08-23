@@ -40,3 +40,4 @@ jobs:
                 echo "::debug::Config file exists."
             elas:
                 echo "::error::Config file is missing!"
+            fi
