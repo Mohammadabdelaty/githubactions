@@ -1,4 +1,4 @@
-# Github Actions Study
+# Github Actions Notes
 
 This is a simple toturial, and study of how github actions work.
 
